@@ -6,10 +6,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--
-    escluso css originale
-    <link rel="stylesheet" type="text/css" href="style.css">
-    -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link rel="stylesheet"
         href="fontawesome/css/all.min.css">
     <link
@@ -50,7 +47,10 @@
         /* default mobile, ma da mettere a scomparsa la sidebar... */
         .container-grid {
             display: grid;
-            grid-template-areas: "sidebar""main""footer";
+            grid-template-areas:
+            "sidebar" 
+            "main"
+            "footer";
 
         }
 
@@ -67,6 +67,7 @@
 
         .sidebar {
             position: fixed;
+            max-width: 25vw;
             height: 100vh;
             color: white;
             background-color: #212D87;
@@ -119,7 +120,7 @@
                 </li>
                 <li>
                     <a class="menu"
-                        href="index.html"><i class="loghi fas fa-camera"></i> Galleria fotografica</a>
+                        href="index.html"><i class="loghi fas fa-camera"></i> Fotogallery</a>
                 </li>
                 <li>
                     <a class="menu"
