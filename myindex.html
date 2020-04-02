@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+    escluso css originale
+    <link rel="stylesheet" type="text/css" href="style.css">
+    -->
+    <link rel="stylesheet"
+        href="fontawesome/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+        }
+
+        /* immagini responsive - es. titolo sito */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* DEFINISCO LE MIE GRID AREAS */
+        .sidebar {
+            grid-area: sidebar;
+            /* do un nome per identificarla*/
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        /* default mobile, ma da mettere a scomparsa la sidebar... */
+        .container-grid {
+            display: grid;
+            grid-template-areas: "sidebar""main""footer";
+
+        }
+
+        @media (min-width: 700px) {
+            .container-grid {
+                grid-template-columns: 1fr 3fr;
+                grid-template-areas:
+                    "sidebar main"
+                    "sidebar footer"
+                ;
+            }
+
+        }
+
+        .sidebar {
+            position: fixed;
+            height: 100vh;
+            color: white;
+            background-color: #212D87;
+            padding: 1rem;
+        }
+
+        .menu-social a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu-social li {
+            list-style-type: none;
+            padding: 1rem;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-grid">
+
+
+        <nav class="sidebar">
+            <a href="index.html"><img class="titolo"
+                    src="img/titolo.png"
+                    alt="titolo"></a>
+            <!-- rifatto con <li> per gestire in modo block (margini verticali) -->
+            <ul class="menu-social">
+                <li>
+                    <a class="menu active"
+                        href="index.html"><i class="loghi fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a class="menu"
+                        href="index.html"><i class="loghi fas fa-map-marker-alt"></i> Destinazioni</a>
+                </li>
+                <li>
+                    <a class="menu"
+                        href="index.html"><i class="loghi far fa-comments"></i></i> Blog</a>
+                </li>
+                <li>
+                    <a class="menu"
+                        href="index.html"><i class="loghi fas fa-camera"></i> Galleria fotografica</a>
+                </li>
+                <li>
+                    <a class="menu"
+                        href="index.html"><i class="loghi far fa-calendar-alt"></i> Eventi</a>
+                </li>
+                <li>
+                    <a class="menu"
+                        href="index.html"><i class="loghi fas fa-users"></i> Redazione</a>
+                </li>
+                <li>
+                    <input class="cerca"
+                        type="text"
+                        placeholder="Cerca nel sito.."><i class="logocerca fas fa-search"></i>
+                </li>
+            </ul>
+
+        </nav>
+
+        <main class="page">
+            <section class="content">
+                <h1>Metti tutto qua dentro</h1>
+                <h2>Usa grid - grid-area per gestire anche il responsive</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, accusantium minima sint enim quod
+                    ex suscipit porro quisquam illo totam rerum voluptas maxime dolorum voluptatum nostrum consequuntur
+                    exercitationem, odit expedita accusamus impedit repellat consectetur at! Impedit explicabo eius
+                    minus aut suscipit fugiat, quaerat quisquam in totam? Quasi repudiandae ratione ea provident maiores
+                    id. Molestias dicta nam necessitatibus amet! Amet consequuntur distinctio ut expedita ratione
+                    numquam id, sunt dicta velit. Tenetur eum eligendi, voluptas minus iste deleniti voluptatem debitis
+                    molestias perspiciatis facilis, eveniet aperiam vel voluptatibus corrupti ut quibusdam rerum et
+                    quaerat assumenda totam, labore incidunt. Provident repellat est vitae vel nesciunt, sapiente quidem
+                    ex fuga dignissimos aliquam quaerat culpa nam debitis. Ipsa unde omnis aperiam, repellat ratione
+                    minus cupiditate iusto harum, numquam debitis quas pariatur? Nostrum laboriosam officiis sit quam,
+                    repudiandae aliquam! Minima dolorum ratione in velit, nisi tempore explicabo excepturi
+                    exercitationem pariatur delectus illo id, sint veritatis porro! Ullam nesciunt dolore minima
+                    possimus similique. Molestiae cum nobis, doloribus consectetur quis sequi dignissimos similique
+                    minima tempore libero totam, accusamus eligendi expedita vitae culpa nisi labore, molestias maxime
+                    debitis quo amet voluptatem perspiciatis! Ducimus quos vel laudantium quo veritatis recusandae
+                    reiciendis iste! Provident minus consequuntur labore laudantium molestiae ducimus voluptate.
+                    Reprehenderit quasi incidunt ipsum libero fugiat neque distinctio non minus, voluptate cum nesciunt
+                    optio quidem facilis tempora deserunt at nemo ratione provident magni assumenda quas suscipit
+                    maxime? Praesentium recusandae libero quae, eum animi perspiciatis laboriosam ipsam. Necessitatibus
+                    eum quia corporis repellendus laboriosam alias, deserunt nostrum minus accusamus perferendis quos
+                    magni labore temporibus quo placeat in voluptates ab. Soluta, reprehenderit fugit saepe optio ad
+                    temporibus autem veritatis expedita officia aliquid placeat eveniet nesciunt ducimus aut
+                    exercitationem at obcaecati dignissimos consequatur veniam tempora in quibusdam. Dolorum tenetur
+                    perspiciatis hic tempora id, voluptatem commodi explicabo numquam mollitia. Deleniti repudiandae
+                    modi omnis autem eveniet, ad adipisci itaque neque aut eligendi ipsum ipsa beatae rem? Libero error,
+                    exercitationem temporibus modi inventore voluptate possimus, tempore repellat cupiditate, asperiores
+                    laboriosam provident natus totam suscipit alias cum placeat vero architecto! Officiis obcaecati
+                    praesentium fuga saepe commodi voluptatibus veniam, possimus cupiditate libero, inventore voluptates
+                    ipsum temporibus sapiente neque, soluta voluptate non unde perspiciatis provident dolorum
+                    dignissimos. Hic alias dolorem, neque iusto corrupti possimus laborum dolor rerum omnis cum
+                    excepturi blanditiis vitae delectus dolore! Aspernatur animi quis iusto pariatur atque obcaecati
+                    libero consequuntur saepe voluptatum natus assumenda tempore hic, facilis eveniet consequatur quam
+                    illo laudantium quod? Nisi ab magni sequi ratione numquam, error assumenda, maiores deleniti ipsam
+                    delectus repudiandae ea maxime est culpa optio fugit non! Similique animi earum adipisci officiis
+                    voluptate reprehenderit magnam recusandae ab atque blanditiis eum minus debitis laborum aperiam
+                    asperiores alias porro quaerat expedita, dicta laboriosam? Perspiciatis, cum incidunt error maiores
+                    similique quis consectetur quas odit quam, vero minus explicabo eum recusandae nostrum vel illo
+                    dolor dicta harum quidem repellendus non asperiores! Magni eos illum ab! Delectus sed possimus,
+                    ipsam suscipit minus dicta explicabo fugiat accusantium quidem alias, quasi ullam velit, adipisci
+                    eos eum ipsum voluptatem illum accusamus distinctio eaque. Eos possimus in maiores quos sequi,
+                    voluptatem accusamus dignissimos cumque perferendis quae, adipisci deleniti quo fugiat iusto.
+                    Pariatur vitae repellat totam illum. Magni nemo ipsa corporis corrupti consectetur. Voluptatibus,
+                    tempora ducimus expedita, ipsam, unde vero est consectetur ex obcaecati odio dolor ad! Quam at
+                    suscipit iure quasi veritatis alias quisquam ea harum voluptate laboriosam magnam quaerat vero
+                    dolores, reprehenderit pariatur provident sunt nulla nihil perspiciatis cumque ex ab? Fugit atque
+                    voluptates blanditiis perferendis dolore. Omnis aut impedit iste deserunt similique labore facere
+                    sint earum repellat quis vero, delectus fugiat ab reprehenderit nobis ad. Doloribus, nisi dolore
+                    impedit magnam laboriosam unde, repellat mollitia sit ad numquam reiciendis rem quo excepturi
+                    quibusdam nemo, cum animi fuga? Saepe accusantium rem tempore impedit necessitatibus distinctio
+                    laboriosam. Magni, ut distinctio in, odit dolorem ratione quaerat repellat hic ex, rerum debitis
+                    dignissimos omnis porro! Quasi ratione, reiciendis vitae mollitia culpa architecto reprehenderit!
+                    Voluptatum officia hic eaque placeat, dolorem adipisci iste praesentium tempore, dolores eveniet
+                    tempora itaque voluptas omnis minima! Repellendus, esse dolorum. Ex obcaecati sed beatae facilis
+                    cumque molestias unde, cupiditate consectetur placeat! Est, eveniet magnam itaque eligendi corporis
+                    harum ut quidem, distinctio ducimus illo quisquam excepturi consectetur, ullam veritatis nesciunt
+                    necessitatibus labore? Molestiae perferendis enim repellat cupiditate quo dolorem delectus, sequi
+                    maxime in! Velit officiis cumque inventore rerum suscipit quae odio delectus fugiat doloremque magni
+                    atque odit voluptate ipsa minus natus laboriosam veritatis, incidunt libero itaque placeat corrupti
+                    debitis repellat id? Cum deserunt dolore, est inventore dignissimos labore at exercitationem
+                    doloribus incidunt repellendus excepturi similique, obcaecati placeat impedit libero nihil sit
+                    delectus eius, quia temporibus. Repellendus sequi reiciendis fugiat corporis quasi, vitae provident
+                    incidunt harum non consequuntur cum odit vero obcaecati tenetur iste ipsum explicabo similique
+                    dolor? In a blanditiis accusamus consequuntur quaerat ad nemo voluptas, eius, minima corrupti autem
+                    eligendi sapiente enim, dolor inventore explicabo porro maxime suscipit officia adipisci pariatur
+                    doloremque error. Quasi, odio accusamus. Eveniet iusto laudantium, dicta et blanditiis debitis quae
+                    rem eligendi nihil, quam aut repellendus temporibus atque aperiam commodi illo nesciunt. Quasi, hic
+                    doloremque eveniet voluptates quos perferendis eum quaerat velit neque enim, id nam porro ipsum aut
+                    laborum harum consequatur amet nihil distinctio! Hic voluptatibus veritatis voluptate porro ullam,
+                    eius placeat odit cum rem vel ea tempore natus iusto cumque corrupti consectetur? Architecto porro
+                    molestias, repellendus consequatur praesentium odit ullam, distinctio sit quos, voluptas rerum
+                    quisquam dolores culpa eos eius alias quasi temporibus ab iure. Tenetur nulla ad velit consectetur
+                    quo iusto id. Nobis blanditiis nesciunt quae harum ab laborum commodi illum! Debitis eligendi
+                    tempore amet? Quasi distinctio alias aperiam magni ad totam consequuntur vel rerum placeat maxime
+                    commodi voluptates temporibus ipsum inventore expedita, sint deserunt? Saepe temporibus deleniti
+                    iste. Optio, reiciendis nam in sint culpa vel mollitia accusantium nostrum sapiente dolorum dolores
+                    porro modi? Exercitationem numquam nisi animi, sunt magni assumenda blanditiis voluptatum, quaerat
+                    porro laudantium nam minima voluptates saepe! Ex recusandae aspernatur nostrum dolorum placeat esse
+                    ullam consequuntur necessitatibus dolores repudiandae illum blanditiis illo, quisquam minus,
+                    sapiente eos vero aliquam, animi voluptate quia odio culpa ratione. Architecto debitis deleniti
+                    error adipisci eligendi? Ipsam.</p>
+
+            </section>
+        </main>
+        <footer>
+            <h3>Ciao sono il footer!</h3>
+        </footer>
+    </div>
+</body>
+
+</html>
